@@ -12,7 +12,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## DB access
 
-Run `ng db` to access JsonServer DB on port 5000
+Run `npm run db` to access JsonServer DB on port 5000
 
 ## Code scaffolding
 

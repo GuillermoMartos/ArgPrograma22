@@ -1,0 +1,38 @@
+.task{
+    background-color:gray;
+    margin: 5px;
+    padding: 10px 20px;
+    cursor:pointer;
+}
+
+.task.reminder{
+    border-left: 5px solid green;
+
+}
+
+.task h3{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.close-card{
+    position: absolute;
+    right:30rem;
+    font-weight:400;
+}
+
+.btn-x{
+    border-radius: 30px;
+    padding:3px;
+}
+
+.btn-x:hover{
+    background: linear-gradient(205deg, red 0%, rgb(208, 255, 0) 90%);
+    cursor: pointer;
+}
+
+.X{
+    color:black;
+    font-size:large;
+}

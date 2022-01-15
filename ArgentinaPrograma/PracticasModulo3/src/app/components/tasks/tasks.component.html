@@ -1,5 +1,6 @@
 <app-task-item 
     *ngFor="let task of tasks"
     [task]="task"
+    (clickQuitar)="borrarTaskDB(task)"
 >
 </app-task-item>

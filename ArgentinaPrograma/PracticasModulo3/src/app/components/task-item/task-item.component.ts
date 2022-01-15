@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Task } from 'src/app/Task';
 import { TASKS } from 'src/app/mock-tasks';
 
@@ -9,9 +9,15 @@ import { TASKS } from 'src/app/mock-tasks';
 })
 export class TaskItemComponent implements OnInit {
   @Input() task:Task=TASKS[0];
+  @Output() clickQuitar:EventEmitter<Task>=new EventEmitter()
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  quitaTarea(task:Task){
+    this.clickQuitar.emit(task);
   }
 
 }

@@ -1,5 +1,9 @@
 <div class="task">
-    <div class="close-card"><button class="btn-x"><p class="X">x</p></button></div>
+    <div class="close-card">
+        <button class="btn-x" (click)="quitaTarea(task)">
+            <p class="X">x</p>
+        </button>
+    </div>
     <h3>{{task.id}}. {{task.text}}</h3>
     <p>{{task.day}}</p>
 </div>

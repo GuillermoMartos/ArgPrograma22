@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TaskService } from '../../service/task.service';
 import { Task } from 'src/app/Task';
 
@@ -19,11 +19,20 @@ export class TasksComponent implements OnInit {
       this.tasks=response)
   }
 
-  borrarTaskDB(task:Task){
-    this.taskService.borrarTaskDB(task).subscribe(()=>
-      this.tasks=this.tasks.filter(t=> t.id !== task.id)
-    )
+  borrarTask(task:Task){
+    this.taskService.borrarTaskDB(task).subscribe()
+    this.taskService.getTasks().subscribe(response=>
+      this.tasks=response)
     return alert(`tarea "${task.text}" fue eliminada`)
+  }
+
+  setReminder(task:Task){
+    task.reminder=!task.reminder
+    this.taskService.cambiarReminderDB(task).subscribe()
+  }
+
+  addTaskDB(task:Task){
+    return alert(task.id)
   }
 
 }

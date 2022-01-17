@@ -10,6 +10,7 @@ import { TASKS } from 'src/app/mock-tasks';
 export class TaskItemComponent implements OnInit {
   @Input() task:Task=TASKS[0];
   @Output() clickQuitar:EventEmitter<Task>=new EventEmitter()
+  @Output() clickRecordar:EventEmitter<Task>=new EventEmitter()
 
   constructor() { }
 
@@ -18,6 +19,10 @@ export class TaskItemComponent implements OnInit {
 
   quitaTarea(task:Task){
     this.clickQuitar.emit(task);
+  }
+
+  recordar(task:Task){
+    this.clickRecordar.emit(task)
   }
 
 }

@@ -1,4 +1,8 @@
-<div class="task">
+<div 
+class="task"
+[ngClass]="{reminder:task.reminder}"
+(dblclick)="recordar(task)"
+>
     <div class="close-card">
         <button class="btn-x" (click)="quitaTarea(task)">
             <p class="X">x</p>

@@ -1,6 +1,10 @@
 <app-task-item 
     *ngFor="let task of tasks"
     [task]="task"
-    (clickQuitar)="borrarTaskDB(task)"
+    (clickQuitar)="borrarTask(task)"
+    (clickRecordar)="setReminder(task)"
+    (addClick)="addTaskDB(task)"
 >
 </app-task-item>
+
+

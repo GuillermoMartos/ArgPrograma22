@@ -10,17 +10,13 @@
       "id": 4,
       "text": "hacer compras",
       "day": "17 de Enero de 2022",
+      "reminder": false
+    },
+    {
+      "id": 3,
+      "text": "hacer locuras jajaja",
+      "day": "17 de Enero de 2022",
       "reminder": true
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

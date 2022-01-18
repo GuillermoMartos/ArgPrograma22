@@ -1,10 +1,13 @@
 <header>
 
     <h1>{{title}}:</h1>
-    <app-button 
-        color="green" 
-        text="Add task">
-        (btnClick)="sumaTareas()"
-    </app-button>
+    <form (ngSubmit)="onClick()">
+        <app-button 
+            color="green" 
+            type="submit"
+            text="New task">
+        </app-button>
+    </form>
+        
 
 </header>

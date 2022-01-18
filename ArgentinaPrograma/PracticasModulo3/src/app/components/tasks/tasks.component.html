@@ -1,10 +1,15 @@
-<app-task-item 
-    *ngFor="let task of tasks"
-    [task]="task"
-    (clickQuitar)="borrarTask(task)"
-    (clickRecordar)="setReminder(task)"
-    (addClick)="addTaskDB(task)"
+<app-header (clickAgregar)="onShowAdd($event)"></app-header>
+
+<div *ngIf="isValid; else other_content">
+  <app-add-task (newTaskClic)="addTaskDB($event)"></app-add-task>
+</div>
+
+<ng-template #other_content>click New Task to add...</ng-template>
+
+<app-task-item
+  *ngFor="let task of tasks"
+  [task]="task"
+  (clickQuitar)="borrarTask(task)"
+  (clickRecordar)="setReminder(task)"
 >
 </app-task-item>
-
-

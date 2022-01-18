@@ -18,13 +18,7 @@ export class ButtonComponent implements OnInit {
 
   onClick() {
     // la función debe emitir un evento hacia afuera, por eso output y la variable a la cual vamos a bindear esta función... la vamos a recuperar en las instanciaciones del componente (o sea, donde la llamamos como <app-button/>, o sea en el html del header)
-    let body: Task = {
-      id: 8,
-      text: "eventazo",
-      day: "3 de jamás",
-      reminder: false,
-    };
-
-    this.addClick.emit(body)
+    
+    // this.addClick.emit(body)
   }
 }

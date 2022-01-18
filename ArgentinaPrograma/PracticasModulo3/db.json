@@ -1,22 +1,28 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "text": "salir a correr",
-      "day": "15 de Enero de 2022",
-      "reminder": true
-    },
-    {
-      "id": 4,
-      "text": "hacer compras",
-      "day": "17 de Enero de 2022",
+      "id": 2,
+      "text": "comer nueces",
+      "day": "14 de Abril de 2023",
       "reminder": false
     },
     {
-      "id": 3,
-      "text": "hacer locuras jajaja",
-      "day": "17 de Enero de 2022",
+      "id": "4",
+      "text": "algo importante!",
+      "day": "3 de mayo",
       "reminder": true
+    },
+    {
+      "id": "3",
+      "text": "algo suave",
+      "day": "3 de julio",
+      "reminder": false
+    },
+    {
+      "id": "1",
+      "text": "albondigas!",
+      "day": "23 de mayo",
+      "reminder": false
     }
   ]
 }

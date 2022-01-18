@@ -61,19 +61,14 @@ export class TaskService {
     return this.http.delete<Task>(pointer)
   }
 
-  // // está mal seguro
+
   cambiarReminderDB(task:Task):Observable<Task>{
-  //   const pointer=`${this.apiUrl}/?id=${task.id}`
-  //   const body={reminder:!task.reminder}
-  //   return this.http.put<Task>(pointer,body)
   const pointer=`${this.apiUrl}/${task.id}`
   return this.http.put<Task>(pointer,task,this.httpOptions)
-
-    
 }
 
   // // está bien?
-  // agregarTaskDB(task:Task):Observable<Task>{
-  //   return (http)
-  // }
+  agregarTaskDB(task:Task):Observable<Task>{
+    return this.http.post<Task>(this.apiUrl, task)
+  }
 }

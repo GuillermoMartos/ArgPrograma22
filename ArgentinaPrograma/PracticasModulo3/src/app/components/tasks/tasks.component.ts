@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { TaskService } from '../../service/task.service';
 import { Task } from 'src/app/Task';
 
@@ -8,7 +8,9 @@ import { Task } from 'src/app/Task';
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
+  isValid:boolean=false
   tasks:Task[]=[];
+  
   constructor(private taskService:TaskService) {
     
    }
@@ -21,9 +23,9 @@ export class TasksComponent implements OnInit {
 
   borrarTask(task:Task){
     this.taskService.borrarTaskDB(task).subscribe()
+    alert(`tarea "${task.text}" fue eliminada`)
     this.taskService.getTasks().subscribe(response=>
       this.tasks=response)
-    return alert(`tarea "${task.text}" fue eliminada`)
   }
 
   setReminder(task:Task){
@@ -32,7 +34,15 @@ export class TasksComponent implements OnInit {
   }
 
   addTaskDB(task:Task){
-    return alert(task.id)
+    this.taskService.agregarTaskDB(task).subscribe()
+    alert(`task ${task.text} agregada exitosamente`)
+    this.taskService.getTasks().subscribe(response=>
+      this.tasks=response)
+    this.isValid=false
+  }
+
+  onShowAdd(showAdd:any){
+    this.isValid=showAdd.value
   }
 
 }

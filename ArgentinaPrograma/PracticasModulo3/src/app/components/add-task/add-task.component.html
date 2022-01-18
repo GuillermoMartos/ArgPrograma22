@@ -1,0 +1,46 @@
+<form (ngSubmit)="addDB()">
+  <div class="form-control">
+    <label for="task-text">Task</label>
+    <input
+      type="text"
+      id="task-text"
+      name="task-text"
+      placeholder="your new task here..."
+      [(ngModel)]="text"
+    />
+
+    <label for="task-date">Date</label>
+    <input
+      type="text"
+      id="task-date"
+      name="task-date"
+      [(ngModel)]="date"
+      placeholder="type your date..."
+    />
+
+    <label for="task-reminder">Remind?</label>
+    <select id="task-reminder" name="task-reminder" [(ngModel)]="reminder">
+      <option [ngValue]=true>Yes</option>
+      <option [ngValue]="false">No</option>
+    </select>
+
+   
+    <label for="task-date">Id</label>
+    <input
+      type="text"
+      id="task-id"
+      [(ngModel)]="id"
+      name="task-id"
+      placeholder="number for id..."
+    />
+
+    <app-button
+      class="btn btn-block"
+      color="green"
+      text="Add task"
+      type="submit"
+    >
+    </app-button>
+   
+  </div>
+</form>

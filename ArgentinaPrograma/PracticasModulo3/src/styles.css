@@ -10,7 +10,10 @@
 body{
     font-family: "Poppins", sans-serif;    
 }
-
+.logo{
+     margin-left: 97%;
+     position:absolute
+}
 .container{
     max-width: 500px;
     margin: 30px auto;
@@ -19,6 +22,25 @@ body{
     border: 1px solid steelblue;
     padding: 30px;
     border-radius: 5px;
+}
+
+.nav-main{
+    background: linear-gradient(205deg, red 0%, rgb(208, 255, 0) 90%);
+    padding:3px
+}
+.a-nav{
+    font-size: 20px;
+    color:black;
+    font-weight: bolder;
+    margin: 3px;
+    padding: 5px;
+}
+.a-nav:hover{
+    margin: 2px;
+    background: white;
+    border-radius: 30px;
+    border-color: blueviolet;
+    cursor: pointer;
 }
 
 .btn {

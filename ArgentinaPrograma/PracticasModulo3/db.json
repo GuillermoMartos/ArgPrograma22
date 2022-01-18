@@ -17,12 +17,6 @@
       "text": "algo suave",
       "day": "3 de julio",
       "reminder": false
-    },
-    {
-      "id": "1",
-      "text": "albondigas!",
-      "day": "23 de mayo",
-      "reminder": false
     }
   ]
 }

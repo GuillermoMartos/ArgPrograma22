@@ -48,4 +48,5 @@ public class EducationController {
     public List<Education> get_educations(@RequestBody Deleter id_education) {
         return educationService.get_education(id_education.getId());
     }
+
 }

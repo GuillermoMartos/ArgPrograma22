@@ -1,0 +1,14 @@
+package com.apitest.testing.Repository;
+
+import java.util.List;
+
+import com.apitest.testing.Model.Skill;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface SkillRepository extends CrudRepository <Skill, Long>{
+    List<Skill> findAllByidUser(Long idUser);
+    void deleteByIdSkill(Long idSkill);
+}

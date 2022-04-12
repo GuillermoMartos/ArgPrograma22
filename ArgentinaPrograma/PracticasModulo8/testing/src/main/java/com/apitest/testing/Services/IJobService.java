@@ -12,4 +12,4 @@ public interface IJobService {
     public List<Job> list_job();
     public List<Job> get_job(Long id_user);
 
-}
+}   

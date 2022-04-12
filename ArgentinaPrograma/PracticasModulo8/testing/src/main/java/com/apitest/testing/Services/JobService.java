@@ -32,7 +32,6 @@ public class JobService implements IJobService{
 
     @Override
     public List<Job> list_job() {
-        
         return (List<Job>) jobRepo.findAll();
     }
 

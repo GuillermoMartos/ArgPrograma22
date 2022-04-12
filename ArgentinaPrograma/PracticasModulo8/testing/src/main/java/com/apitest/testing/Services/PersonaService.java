@@ -44,4 +44,10 @@ public class PersonaService implements IPersonaService {
         return (List<Persona>) personaRepository.findAll();
     }
 
+    @Override
+    public void updatePersona(Persona persona) {
+        //no crea un nuevo registro porque esta vez el persona ya viene con el Id (https://stackoverflow.com/questions/11881479/how-do-i-update-an-entity-using-spring-data-jpa)
+        personaRepository.save(persona);
+    }
+
 }

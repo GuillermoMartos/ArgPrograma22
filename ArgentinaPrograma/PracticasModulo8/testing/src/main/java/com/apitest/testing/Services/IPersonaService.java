@@ -11,5 +11,6 @@ public interface IPersonaService {
     public List<Persona> listarPersonas();
     public Persona encontrarMail(String email, String password);
     public boolean checkExist (Persona persona);
+    public void updatePersona(Persona persona);
 
 }

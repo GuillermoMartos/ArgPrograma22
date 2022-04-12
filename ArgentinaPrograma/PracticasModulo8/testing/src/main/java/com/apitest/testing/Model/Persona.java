@@ -2,6 +2,7 @@ package com.apitest.testing.Model;
 
 
 import javax.persistence.Basic;
+import javax.persistence.Column;
 // import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,15 +24,18 @@ public class Persona{
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     Long user_id;
     @Basic
+    @Column(name = "name",nullable = false)
     String name;
+    @Column(name = "password",nullable = false)
     String password;
     String position;
     String about;
     String adress;
     String phone;
-    // @Column(unique=true)
+    @Column(name = "email",nullable = false)
     String email;
     String img;
+    
     
 
     public Persona() {

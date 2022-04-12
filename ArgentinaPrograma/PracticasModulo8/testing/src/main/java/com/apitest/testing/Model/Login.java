@@ -1,5 +1,8 @@
 package com.apitest.testing.Model;
 
+// import javax.persistence.Entity;
+
+// @Entity
 public class Login {
     String password;
     String email;

@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface JobRepository extends CrudRepository <Job, Number>{
-    List<Job> findAllByidUser(Long idUser);
+    List<Job> findAllByidUser(Number idUser);
     void deleteByIdJob(Long idJob);
 }

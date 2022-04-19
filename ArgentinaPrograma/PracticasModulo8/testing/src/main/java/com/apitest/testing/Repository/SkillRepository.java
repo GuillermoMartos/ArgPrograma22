@@ -11,7 +11,5 @@ import org.springframework.stereotype.Repository;
 public interface SkillRepository extends CrudRepository <Skill, Long>{
     List<Skill> findAllByidUser(Number idUser);
     void deleteByIdSkill(Long idSkill);
-    
-    // List<Education> findAllByidUser(Number id_user);
-    // void deleteByIdEducation(Long number);
+
 }

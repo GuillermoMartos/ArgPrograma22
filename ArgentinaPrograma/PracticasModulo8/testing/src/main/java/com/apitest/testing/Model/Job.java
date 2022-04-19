@@ -23,13 +23,13 @@ public class Job {
     String initial_date;
     String end_date;
     @Column(name = "idUser",nullable = false)
-    Long idUser;
+    Number idUser;
 
     public Job() {
     }
     
     public Job(Long idJob, String title, String company, String img, String about_job, String initial_date,
-            String end_date, Long idUser) {
+            String end_date, Number idUser) {
         this.idJob = idJob;
         this.title = title;
         this.company = company;
@@ -96,11 +96,11 @@ public class Job {
         this.end_date = end_date;
     }
 
-    public Long getIdUser() {
+    public Number getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(Long idUser) {
+    public void setIdUser(Number idUser) {
         this.idUser = idUser;
     }
 

@@ -3,6 +3,7 @@ package com.apitest.testing.Controller;
 import java.util.List;
 
 import com.apitest.testing.Model.Deleter;
+import com.apitest.testing.Model.DeleterLong;
 import com.apitest.testing.Model.Job;
 import com.apitest.testing.Services.JobService;
 
@@ -33,8 +34,7 @@ public class JobController {
     }
 
     @DeleteMapping("/job/erase")
-    public void delete(@RequestBody Deleter id_job) {
-        // System.out.println(id_education.getId());
+    public void delete(@RequestBody DeleterLong id_job) {
         jobService.delete_job(id_job);
     }
 

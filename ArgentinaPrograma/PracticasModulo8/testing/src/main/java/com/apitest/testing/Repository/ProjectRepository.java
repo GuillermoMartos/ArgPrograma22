@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ProjectRepository extends CrudRepository <Project, Number> {
-    List<Project> findAllByidUser(Long idUser);
+    List<Project> findAllByidUser(Number idUser);
     void deleteByIdProject(Long idProject);
 }

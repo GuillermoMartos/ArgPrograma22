@@ -2,7 +2,9 @@ package com.apitest.testing.Services;
 
 import java.util.List;
 
-import com.apitest.testing.Model.Deleter;
+import javax.transaction.Transactional;
+
+import com.apitest.testing.Model.DeleterLong;
 import com.apitest.testing.Model.Job;
 import com.apitest.testing.Repository.JobRepository;
 
@@ -10,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+@Transactional
 public class JobService implements IJobService{
 
     @Autowired
@@ -26,7 +29,7 @@ public class JobService implements IJobService{
     }
 
     @Override
-    public void delete_job(Deleter id_job) {
+    public void delete_job(DeleterLong id_job) {
         jobRepo.deleteByIdJob(id_job.getId());
     }
 

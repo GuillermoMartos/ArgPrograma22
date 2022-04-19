@@ -30,14 +30,12 @@ public class SkillController {
 
     @PostMapping("/skill/create")
     public void create(@RequestBody Skill new_skill) {
-        System.out.println(new_skill.toString());
         skillService.create_skill(new_skill);
     }
 
     @DeleteMapping("/skill/erase")
     public void delete(@RequestBody DeleterLong id_skill) {
-        System.out.println(id_skill);
-        System.out.println(id_skill.getId());
+
         skillService.delete_skill(id_skill);
     }
 

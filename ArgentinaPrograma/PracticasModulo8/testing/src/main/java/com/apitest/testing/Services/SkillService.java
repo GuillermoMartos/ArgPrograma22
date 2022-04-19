@@ -32,7 +32,6 @@ public class SkillService implements ISkillService{
 
     @Override
     public void delete_skill(DeleterLong id_skill) {
-        System.out.println(id_skill.getId());
         skillRepo.deleteByIdSkill(id_skill.getId());
         
     }

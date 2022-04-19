@@ -3,6 +3,7 @@ package com.apitest.testing.Controller;
 import java.util.List;
 
 import com.apitest.testing.Model.Deleter;
+import com.apitest.testing.Model.DeleterLong;
 import com.apitest.testing.Model.Project;
 import com.apitest.testing.Services.ProjectService;
 
@@ -33,7 +34,7 @@ public class ProjectController {
     }
 
     @DeleteMapping("/project/erase")
-    public void delete(@RequestBody Deleter id_project) {
+    public void delete(@RequestBody DeleterLong id_project) {
         projectService.delete_project(id_project);
     }
 

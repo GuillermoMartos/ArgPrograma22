@@ -2,7 +2,9 @@ package com.apitest.testing.Services;
 
 import java.util.List;
 
-import com.apitest.testing.Model.Deleter;
+import javax.transaction.Transactional;
+
+import com.apitest.testing.Model.DeleterLong;
 import com.apitest.testing.Model.Project;
 import com.apitest.testing.Repository.ProjectRepository;
 
@@ -10,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+@Transactional
 public class ProjectService implements IProjectService {
 
     @Autowired
@@ -26,7 +29,7 @@ public class ProjectService implements IProjectService {
     }
 
     @Override
-    public void delete_project(Deleter id_project) {
+    public void delete_project(DeleterLong id_project) {
         projectRepo.deleteByIdProject(id_project.getId());
         
     }

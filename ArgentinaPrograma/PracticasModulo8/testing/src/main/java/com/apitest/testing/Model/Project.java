@@ -22,13 +22,13 @@ public class Project {
     String about_project;
     String img;
     @Column(name = "idUser",nullable = false)
-    Long idUser;
+    Number idUser;
     
     public Project() {
     }
 
     public Project(Long idProject, String title, String date, String linkURL, String about_project, String img,
-            Long idUser) {
+    Number idUser) {
         this.idProject = idProject;
         this.title = title;
         this.date = date;
@@ -86,11 +86,11 @@ public class Project {
         this.img = img;
     }
 
-    public Long getIdUser() {
+    public Number getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(Long idUser) {
+    public void setIdUser(Number idUser) {
         this.idUser = idUser;
     }
 

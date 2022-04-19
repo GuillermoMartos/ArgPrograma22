@@ -2,7 +2,9 @@ package com.apitest.testing.Controller;
 
 import java.util.List;
 
+
 import com.apitest.testing.Model.Deleter;
+import com.apitest.testing.Model.DeleterLong;
 import com.apitest.testing.Model.Education;
 import com.apitest.testing.Services.EducationService;
 
@@ -17,14 +19,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = { "http://localhost:4200/" })
+@CrossOrigin(origins = { "http://localhost:4200/","http://localhost:4200/portfolio", "http://localhost:4200" })
 public class EducationController {
     @Autowired
     EducationService educationService;
 
     @GetMapping("/education/list")
     public List<Education> showAll() {
-        return educationService.list_education();
+          return educationService.list_education();
     }
 
     @PostMapping("/education/create")
@@ -33,19 +35,20 @@ public class EducationController {
     }
 
     @DeleteMapping("/education/erase")
-    public void delete(@RequestBody Deleter id_education) {
-        // System.out.println(id_education.getId());
+    public void delete(@RequestBody DeleterLong id_education) {
         educationService.delete_education(id_education);
     }
 
     @PutMapping("/education/update")
     public void update(@RequestBody Education new_education) {
+        System.out.println(new_education.toString());
         educationService.update_education(new_education);
     }
 
-    @PostMapping("/edcuation/info")
+    @PostMapping("/education/info")
     @ResponseBody
     public List<Education> get_educations(@RequestBody Deleter id_education) {
+     
         return educationService.get_education(id_education.getId());
     }
 

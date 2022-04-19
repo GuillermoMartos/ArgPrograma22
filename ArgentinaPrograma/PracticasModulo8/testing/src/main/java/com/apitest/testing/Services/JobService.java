@@ -36,8 +36,8 @@ public class JobService implements IJobService{
     }
 
     @Override
-    public List<Job> get_job(Long id_user) {
-        return jobRepo.findAllByidUser(id_user);
+    public List<Job> get_job(Number number) {
+        return jobRepo.findAllByidUser(number);
     }
     
 }

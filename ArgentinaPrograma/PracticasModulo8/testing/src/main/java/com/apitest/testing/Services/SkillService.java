@@ -2,7 +2,9 @@ package com.apitest.testing.Services;
 
 import java.util.List;
 
-import com.apitest.testing.Model.Deleter;
+import javax.transaction.Transactional;
+
+import com.apitest.testing.Model.DeleterLong;
 import com.apitest.testing.Model.Skill;
 import com.apitest.testing.Repository.SkillRepository;
 
@@ -10,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+@Transactional
 public class SkillService implements ISkillService{
 
     @Autowired
@@ -28,7 +31,8 @@ public class SkillService implements ISkillService{
     }
 
     @Override
-    public void delete_skill(Deleter id_skill) {
+    public void delete_skill(DeleterLong id_skill) {
+        System.out.println(id_skill.getId());
         skillRepo.deleteByIdSkill(id_skill.getId());
         
     }
@@ -39,8 +43,8 @@ public class SkillService implements ISkillService{
     }
 
     @Override
-    public List<Skill> get_skill(Long id_user) {
-        return skillRepo.findAllByidUser(id_user);
+    public List<Skill> get_skill(Number number) {
+        return skillRepo.findAllByidUser(number);
         
     }
     

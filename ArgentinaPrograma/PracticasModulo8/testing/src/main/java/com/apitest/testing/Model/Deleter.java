@@ -1,20 +1,20 @@
 package com.apitest.testing.Model;
 
 public class Deleter {
-    Long id;
+    Number id;
 
     public Deleter() {
     }
 
-    public Deleter(Long id) {
+    public Deleter(Number id) {
         this.id = id;
     }
 
-    public Long getId() {
+    public Number getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Number id) {
         this.id = id;
     }
     

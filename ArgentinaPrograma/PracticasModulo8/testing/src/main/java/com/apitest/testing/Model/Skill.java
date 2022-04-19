@@ -17,14 +17,14 @@ public class Skill {
     String title;
     String about_skill;
     String type;
-    Number qualification;
+    String qualification;
     @Column(name = "idUser",nullable = false)
-    Long idUser;
+    Number idUser;
     
     public Skill() {
     }
 
-    public Skill(Long idSkill, String type, String title, String about_skill, Number qualification, Long idUser) {
+    public Skill(Long idSkill, String type, String title, String about_skill, String qualification, Number idUser) {
         this.idSkill = idSkill;
         this.title = title;
         this.about_skill = about_skill;
@@ -35,6 +35,12 @@ public class Skill {
 
     public Skill(String type) {
         this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return "Skill [about_skill=" + about_skill + ", idSkill=" + idSkill + ", idUser=" + idUser + ", qualification="
+                + qualification + ", title=" + title + ", type=" + type + "]";
     }
 
     public Long getIdSkill() {
@@ -61,19 +67,27 @@ public class Skill {
         this.about_skill = about_skill;
     }
 
-    public Number getQualification() {
+    public String getQualification() {
         return qualification;
     }
 
-    public void setQualification(Number qualification) {
+    public void setQualification(String qualification) {
         this.qualification = qualification;
     }
 
-    public Long getIdUser() {
+    public Number getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(Long idUser) {
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setIdUser(Number idUser) {
         this.idUser = idUser;
     }
     

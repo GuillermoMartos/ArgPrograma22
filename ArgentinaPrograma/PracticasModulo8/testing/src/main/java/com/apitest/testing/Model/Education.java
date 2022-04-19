@@ -20,12 +20,12 @@ public class Education {
     String title;
     String about;
     @Column(name = "idUser",nullable = false)
-    Long idUser;
+    Number idUser;
 
     public Education() {
     }
     public Education(Long idEducation, String institution, String img_institution, String date_initial,
-            String date_end, String title, String about, Long idUser) {
+            String date_end, String title, String about, Number idUser) {
         this.idEducation = idEducation;
         this.institution = institution;
         this.img_institution = img_institution;
@@ -34,6 +34,12 @@ public class Education {
         this.title = title;
         this.about = about;
         this.idUser = idUser;
+    }
+    @Override
+    public String toString() {
+        return "Education [about=" + about + ", date_end=" + date_end + ", date_initial=" + date_initial
+                + ", idEducation=" + idEducation + ", idUser=" + idUser + ", img_institution=" + img_institution
+                + ", institution=" + institution + ", title=" + title + "]";
     }
     public Long getIdEducation() {
         return idEducation;
@@ -77,10 +83,10 @@ public class Education {
     public void setAbout(String about) {
         this.about = about;
     }
-    public Long getIdUser() {
+    public Number getIdUser() {
         return idUser;
     }
-    public void setIdUser(Long id_user) {
+    public void setIdUser(Number id_user) {
         this.idUser = id_user;
     }
 

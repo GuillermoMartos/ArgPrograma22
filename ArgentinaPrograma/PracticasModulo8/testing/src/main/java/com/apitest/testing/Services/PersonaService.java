@@ -24,7 +24,6 @@ public class PersonaService implements IPersonaService {
 
     @Override
     public boolean checkExist(Persona persona) {
-        System.out.println(persona.getEmail());
         return personaRepository.findByEmail(persona.getEmail())!=null?true:false;
     }
 
@@ -48,6 +47,12 @@ public class PersonaService implements IPersonaService {
     public void updatePersona(Persona persona) {
         //no crea un nuevo registro porque esta vez el persona ya viene con el Id (https://stackoverflow.com/questions/11881479/how-do-i-update-an-entity-using-spring-data-jpa)
         personaRepository.save(persona);
+    }
+
+    @Override
+    public Persona findById(Long id) {
+        
+        return personaRepository.findById(id).orElse(null);
     }
 
 }

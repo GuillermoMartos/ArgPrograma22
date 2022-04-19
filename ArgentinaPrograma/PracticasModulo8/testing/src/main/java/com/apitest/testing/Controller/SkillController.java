@@ -3,6 +3,7 @@ package com.apitest.testing.Controller;
 import java.util.List;
 
 import com.apitest.testing.Model.Deleter;
+import com.apitest.testing.Model.DeleterLong;
 import com.apitest.testing.Model.Skill;
 import com.apitest.testing.Services.SkillService;
 
@@ -29,11 +30,14 @@ public class SkillController {
 
     @PostMapping("/skill/create")
     public void create(@RequestBody Skill new_skill) {
+        System.out.println(new_skill.toString());
         skillService.create_skill(new_skill);
     }
 
     @DeleteMapping("/skill/erase")
-    public void delete(@RequestBody Deleter id_skill) {
+    public void delete(@RequestBody DeleterLong id_skill) {
+        System.out.println(id_skill);
+        System.out.println(id_skill.getId());
         skillService.delete_skill(id_skill);
     }
 

@@ -27,7 +27,6 @@ public class Controller {
     @PostMapping("/creador")
     // @ResponseBody
     public void create(@RequestBody Persona persona) {
-        // System.out.println(persona);
         personaService.creador(persona);
     }
 
@@ -41,7 +40,9 @@ public class Controller {
         return personaService.listarPersonas();
     }
 
-    @PostMapping("/user/info")
+   
+
+    @PostMapping("/user/login")
     @ResponseBody
     public Persona buscaporMail(@RequestBody Login datos) {
 

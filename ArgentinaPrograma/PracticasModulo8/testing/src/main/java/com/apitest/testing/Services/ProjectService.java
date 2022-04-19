@@ -37,8 +37,8 @@ public class ProjectService implements IProjectService {
     }
 
     @Override
-    public List<Project> get_project(Long id_user) {
-        return projectRepo.findAllByidUser(id_user);
+    public List<Project> get_project(Number number) {
+        return projectRepo.findAllByidUser(number);
     }
     
 }

@@ -4,7 +4,8 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
-import com.apitest.testing.Model.Deleter;
+// import com.apitest.testing.Model.Deleter;
+import com.apitest.testing.Model.DeleterLong;
 import com.apitest.testing.Model.Education;
 import com.apitest.testing.Repository.EducationRepository;
 
@@ -29,18 +30,20 @@ public class EducationService implements IEducationService {
     }
 
     @Override
-    public void delete_education(Deleter id_education) {
+    public void delete_education(DeleterLong id_education) {
+
         eduRepo.deleteByIdEducation(id_education.getId());
     }
 
     @Override
     public List<Education> list_education() {
-    
+        
         return (List<Education>) eduRepo.findAll();
     }
 
     @Override
-    public List<Education> get_education(Long id_user) {
+    public List<Education> get_education(Number id_user) {
+
         return eduRepo.findAllByidUser(id_user);
     }
     

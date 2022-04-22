@@ -2,6 +2,7 @@ package com.apitest.testing.Services;
 
 import java.util.List;
 
+import com.apitest.testing.Model.Deleter;
 import com.apitest.testing.Model.Persona;
 import com.apitest.testing.Repository.PersonaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,12 +15,14 @@ public class PersonaService implements IPersonaService {
     PersonaRepository personaRepository;
 
     @Override
-    public String creador(Persona persona) {
+    public Deleter creador(Persona persona) {
         if(checkExist(persona)!=true) {
             personaRepository.save(persona);
-            return "created";
+            Deleter created=new Deleter(1);
+            return created;
         }
-        return "email already exist, please try other email";
+        Deleter created=new Deleter(0);
+        return created;
     }
 
     @Override

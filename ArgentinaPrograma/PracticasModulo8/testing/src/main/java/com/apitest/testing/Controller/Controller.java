@@ -2,6 +2,7 @@ package com.apitest.testing.Controller;
 
 import java.util.List;
 
+import com.apitest.testing.Model.Deleter;
 import com.apitest.testing.Model.Login;
 import com.apitest.testing.Model.Persona;
 import com.apitest.testing.Services.PersonaService;
@@ -26,8 +27,8 @@ public class Controller {
 
     @PostMapping("/creador")
     // @ResponseBody
-    public void create(@RequestBody Persona persona) {
-        personaService.creador(persona);
+    public Deleter create(@RequestBody Persona persona) {
+        return personaService.creador(persona);
     }
 
     @DeleteMapping("/borrador/{id}")

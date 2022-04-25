@@ -37,6 +37,7 @@ public class PersonaService implements IPersonaService {
 
     public Persona encontrarMail(String email, String password) {
         Persona busca= personaRepository.findByEmail(email);
+
         if(busca != null)return busca.getPassword().equals(password) ? busca : null;
         return busca;
     }

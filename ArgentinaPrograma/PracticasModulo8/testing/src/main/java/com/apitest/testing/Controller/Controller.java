@@ -46,7 +46,6 @@ public class Controller {
     @PostMapping("/user/login")
     @ResponseBody
     public Persona buscaporMail(@RequestBody Login datos) {
-
         return personaService.encontrarMail(datos.getEmail(), datos.getPassword());
     }
 

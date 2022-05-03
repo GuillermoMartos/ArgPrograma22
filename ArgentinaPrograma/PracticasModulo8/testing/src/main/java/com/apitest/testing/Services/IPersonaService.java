@@ -14,4 +14,5 @@ public interface IPersonaService {
     public boolean checkExist (Persona persona);
     public void updatePersona(Persona persona);
     public Persona findById(Long id);
+    public Persona buscarVisita(String email);
 }

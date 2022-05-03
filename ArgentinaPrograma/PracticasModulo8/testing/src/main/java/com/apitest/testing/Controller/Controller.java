@@ -49,8 +49,15 @@ public class Controller {
         return personaService.encontrarMail(datos.getEmail(), datos.getPassword());
     }
 
+    
     @PutMapping("/udpate/user")
     public void actualizarUsuario(@RequestBody Persona persona) {
         personaService.updatePersona(persona);
+    }
+
+    @PostMapping("/visit")
+    @ResponseBody
+    public Persona visitarPerfil(@RequestBody Login datos) {
+        return personaService.buscarVisita(datos.getEmail());
     }
 }

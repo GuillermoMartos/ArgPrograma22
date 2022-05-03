@@ -59,4 +59,10 @@ public class PersonaService implements IPersonaService {
         return personaRepository.findById(id).orElse(null);
     }
 
+    @Override
+    public Persona buscarVisita(String email) {
+        Persona busca= personaRepository.findByEmail(email);
+        return busca;
+    }
+
 }
